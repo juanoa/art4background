@@ -13,8 +13,14 @@ function App() {
     <div className="app">
       <h1>Art4Background</h1>
       <ImageInput setImage={setImage}/>
-      <ImageResult image={image} resultRef={layoutRef}/>
-      <ExportButton layoutRef={layoutRef}/>
+      {
+        image && (
+          <>
+            <ImageResult image={image} resultRef={layoutRef}/>
+            <ExportButton layoutRef={layoutRef}/>
+          </>
+        )
+      }
     </div>
   )
 }
