@@ -1,0 +1,29 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app_layout {
+  width: 480px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_layout > img {
+  height: 60%;
+}
+
+.app_layout-info {
+  position: absolute;
+}
+
+.app_layout-info > p {
+  margin: 0;
+  font-size: 8px;
+}
