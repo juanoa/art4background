@@ -16,8 +16,10 @@ const ImageResult = ({image, resultRef}) => {
   }, [image])
 
   return (
-    <div style={{background: convertRgbToStyle(rgbColor)}} className="ImageResult" ref={resultRef}>
-      <img ref={imgRef} src={image} alt="Image Uploaded" />
+    <div className="ImageResult_background">
+      <div style={{background: convertRgbToStyle(rgbColor)}} className="ImageResult" ref={resultRef}>
+        <img ref={imgRef} src={image} alt="Image Uploaded" />
+      </div>
     </div>
   );
 };

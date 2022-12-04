@@ -1,4 +1,5 @@
 import React from 'react';
+import "./ImageInput.css"
 
 const ImageInput = ({setImage}) => {
 
@@ -12,7 +13,10 @@ const ImageInput = ({setImage}) => {
   }
 
   return (
-    <input type="file" onChange={onChange}/>
+    <div>
+      <input type="file" name="file" id="file" className="ImageInput" onChange={onChange}/>
+      <label htmlFor="file">Choose an image</label>
+    </div>
   );
 };
 

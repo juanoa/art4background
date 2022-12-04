@@ -10,3 +10,7 @@
 .ImageResult > img {
     height: 60%;
 }
+
+.ImageResult_background {
+    background-color: white;
+}

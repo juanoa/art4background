@@ -1,5 +1,6 @@
 import React from 'react';
 import getScreenshotOfElement from "../utils/getScreenshotOfElement.js";
+import "./ExportButton.css"
 
 const ExportButton = ({layoutRef}) => {
 
@@ -7,7 +8,7 @@ const ExportButton = ({layoutRef}) => {
     getScreenshotOfElement(layoutRef.current);
   }
 
-  return (<button onClick={exportImg}>Export</button>);
+  return (<div onClick={exportImg} className="ExportButton">Export</div>);
 };
 
 export default ExportButton;
