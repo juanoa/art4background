@@ -8,8 +8,6 @@ import getScreenshotOfElement from "./utils/getScreenshotOfElement.js";
 function App() {
 
   const [image, setImage] = useState()
-  const [artName, setArtName] = useState("");
-  const [artArtist, setArtArtist] = useState("");
   const [rgbColor, setRgbColor] = useState({})
   const imgRef = useRef();
   const layoutRef = useRef();
@@ -30,13 +28,7 @@ function App() {
       <ImageInput setImage={setImage} />
       <div style={{background: convertRgbToStyle(rgbColor)}} className="app_layout" ref={layoutRef}>
         <img ref={imgRef} src={image} alt="Image Uploaded" />
-        <div className="app_layout-info">
-          <p><b>{artName}</b></p>
-          <p>{artArtist}</p>
-        </div>
       </div>
-      <input onChange={(e) => setArtName(e.target.value)}/>
-      <input onChange={(e) => setArtArtist(e.target.value)}/>
       <button onClick={exportImg}>Export</button>
     </div>
   )
