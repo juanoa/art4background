@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Art4Background</h1>
+      <h1 className="app_title">Art4Background</h1>
       <ImageInput setImage={setImage}/>
       {
         image && (

@@ -8,7 +8,7 @@ const ExportButton = ({layoutRef}) => {
     getScreenshotOfElement(layoutRef.current);
   }
 
-  return (<div onClick={exportImg} className="ExportButton">Export</div>);
+  return (<div onClick={exportImg} className="ExportButton">Save</div>);
 };
 
 export default ExportButton;

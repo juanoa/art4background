@@ -7,6 +7,10 @@
   gap: 2rem;
 }
 
+.app_title {
+  font-size: 4rem;
+}
+
 .app_layout {
   width: 480px;
   height: 270px;
