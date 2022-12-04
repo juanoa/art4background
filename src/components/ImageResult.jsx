@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import convertRgbToStyle from "../utils/convertRgbToStyle.js";
 import getAverageColorFromImage from "../utils/getAverageColorFromImage.js";
+import "./ImageResult.css"
 
 const ImageResult = ({image, resultRef}) => {
 
@@ -8,12 +9,14 @@ const ImageResult = ({image, resultRef}) => {
   const imgRef = useRef();
 
   useEffect(() => {
-    const rgb = getAverageColorFromImage(imgRef.current)
-    setRgbColor(rgb)
+    if (imgRef.current) {
+      const rgb = getAverageColorFromImage(imgRef.current)
+      setRgbColor(rgb)
+    }
   }, [image])
 
   return (
-    <div style={{background: convertRgbToStyle(rgbColor)}} className="app_layout" ref={resultRef}>
+    <div style={{background: convertRgbToStyle(rgbColor)}} className="ImageResult" ref={resultRef}>
       <img ref={imgRef} src={image} alt="Image Uploaded" />
     </div>
   );
